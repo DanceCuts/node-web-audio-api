@@ -137,7 +137,6 @@ Cargo.lock
 *.bak
 
 *.zip
-*.node
 
 *.test.yml
 
