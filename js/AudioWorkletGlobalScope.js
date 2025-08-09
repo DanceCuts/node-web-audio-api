@@ -109,7 +109,10 @@ function isConstructor(f) {
 
 function runLoop() {
   // block until we need to render a quantum
-  run_audio_worklet_global_scope(workletId, processors);
+  try {
+    run_audio_worklet_global_scope(workletId, processors);
+  }
+  catch {}
   // yield to the event loop, and then repeat
   runLoopImmediateId = setImmediate(runLoop);
 }
